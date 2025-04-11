@@ -52,14 +52,19 @@
 				i = i >= 10 ? 1: ++i;
 				$h1.textContent = `${txt}${i}`;
 			});
+
+		//미션2. 숫자 이미지를 클릭할때 마다 이미지 속 숫자는 1씩 증가한다.	
+
 			$img.addEventListener('click',()=>{
 				j = j >=10 ? 1 : ++j;
-				const sr = ``;
-				alert($img.src);
+				const sr_1 = $img.src.slice(-6);
+				
+				const sr = `images/num_${String(j).padStart(2,0)}.jpg`;
+				$img.src = sr; //이미지주소변경
 			});
 		}	
 
-		//미션2. 숫자 이미지를 클릭할때 마다 이미지 속 숫자는 1씩 증가한다.
+		
 		
 		</script>		
 	</body>
