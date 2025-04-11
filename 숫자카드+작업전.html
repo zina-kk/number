@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>웹문서 기본구조</title>
+		<style>
+			#layout 	{
+						max-width:700px; margin:50px auto;
+						border:3px solid yellowgreen; padding:20px;
+			}
+			
+			#layout img {
+						width:300px; height:150px; float:right;
+						margin:0 0px 10px 20px; border-radius:10px;
+			}
+			#layout p 	{
+						text-align:justify; line-height:180%;
+			}
+			#layout hr 	{
+						width:80%; height:30px; border:none;
+						background:linear-gradient(white, lightgray);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="layout">
+			<h1 title="클릭하세요">웹 문서의 기본 구조</h1>
+			<img src="images/num_01.jpg" alt="숫자카드" title="클릭하세요">
+			<p>
+				때 시인의 가득 까닭입니다. 새워 까닭이요, 하나에 헤는 지나고 묻힌 별 있습니다. 릴케 잠, 다 계십니다. 없이 않은 프랑시스 추억과 멀듯이, 하나에 피어나듯이 계절이 하나의 까닭입니다. 말 했던 이름과 멀리 책상을 내린 시와 아무 이런 거외다. 그리워 풀이 이네들은 새워 별들을 있습니다. 이름을 언덕 언덕 이제 있습니다. 별빛이 불러 별 멀리 하나에 벌레는 같이 새겨지는 무덤 버리었습니다. 걱정도 많은 위에 별 까닭이요, 내린 했던 멀리 애기 있습니다. 까닭이요, 헤일 멀듯이, 별 라이너 책상을 시와 애기 까닭이요, 계십니다. 소학교 이런 이름과, 하나에 그리고 거외다. 아직 마디씩 하나에 계집애들의 멀리 이네들은 있습니다. 묻힌 이런 사랑과 추억과 새겨지는 버리었습니다. 쓸쓸함과 하나에 프랑시스 있습니다. 강아지, 무엇인지 이런 별 까닭입니다. 불러 위에 풀이 가난한 까닭입니다.
+			</p>
+			<hr>
+			<p>
+				때 시인의 가득 까닭입니다. 새워 까닭이요, 하나에 헤는 지나고 묻힌 별 있습니다. 릴케 잠, 다 계십니다. 없이 않은 프랑시스 추억과 멀듯이, 하나에 피어나듯이 계절이 하나의 까닭입니다. 말 했던 이름과 멀리 책상을 내린 시와 아무 이런 거외다. 그리워 풀이 이네들은 새워 별들을 있습니다. 이름을 언덕 언덕 이제 있습니다. 별빛이 불러 별 멀리 하나에 벌레는 같이 새겨지는 무덤 버리었습니다. 걱정도 많은 위에 별 까닭이요, 내린 했던 멀리 애기 있습니다. 까닭이요, 헤일 멀듯이, 별 라이너 책상을 시와 애기 까닭이요, 계십니다. 소학교 이런 이름과, 하나에 그리고 거외다. 아직 마디씩 하나에 계집애들의 멀리 이네들은 있습니다. 묻힌 이런 사랑과 추억과 새겨지는 버리었습니다. 쓸쓸함과 하나에 프랑시스 있습니다. 강아지, 무엇인지 이런 별 까닭입니다. 불러 위에 풀이 가난한 까닭입니다.
+			</p>
+		</div>
+		
+		<script>
+
+		//미션1. 헤딩 텍스트 오른쪽에 숫자 증가하기	
+		{
+			const $h1 = document.getElementsByTagName('h1')[0];
+			const $img = document.getElementsByTagName('img')[0];
+			
+			let i = 1;// <h1>숫자
+			let j = 1; //<img>숫자
+			$h1.textContent +=` ${i}`;
+			const txt = $h1.textContent.slice(0,-1);
+
+			$h1.addEventListener('click',()=>{
+				i = i >= 10 ? 1: ++i;
+				$h1.textContent = `${txt}${i}`;
+			});
+			$img.addEventListener('click',()=>{
+				j = j >=10 ? 1 : ++j;
+				const sr = ``;
+				alert($img.src);
+			});
+		}	
+
+		//미션2. 숫자 이미지를 클릭할때 마다 이미지 속 숫자는 1씩 증가한다.
+		
+		</script>		
+	</body>
+</html>
